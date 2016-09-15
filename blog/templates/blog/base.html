@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<html >
+    <head>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <meta charset="UTF-8">
+        <title>Merixsudio blog</title>
+    </head>
+    <body class="body">
+            <div class = "image"></div>
+            <div class="page-header">
+                <h1> MERIXSTUDIO</h1>
+                <h4><a href="{% url 'post_list' %}">Back to the beggining<a></h4>
+                <a  class=new_post" href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> New Post </a>
+            </div>
+            <div class="content container">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

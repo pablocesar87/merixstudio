@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+    <div class="post">
+        {% if post.modified_date %}
+            <div class="date">
+                <p>Modified at:<p/>{{ post.modified_date }}
+            </div>
+         {% else %}
+            <div class="date">
+                <p>Published at:<p/>{{ post.published_date }}
+            </div>
+        {% endif %}
+        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <span class="comment_count"> Comments: </span>{{ post.comment_count }}</a>
+    </div>
+    {% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,14 @@
+# django-rosetta
+# django-sendfile
+# django-widget-tweaks
+# django-stdimage
+# psycopg2
+django-compressor
+django-model-utils
+django-registration-redux
+django-silk
+Django>=1.9.7,<1.10
+ipython
+python-memcached
+pytz
+raven
