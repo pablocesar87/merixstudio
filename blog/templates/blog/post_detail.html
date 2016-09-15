@@ -3,11 +3,11 @@
     <div class="post">
         {% if post.modified_date %}
             <div class="date">
-                <p>Modified at:<p/>{{ post.modified_date }}
+                {{ post.modified_date }}
             </div>
          {% else %}
             <div class="date">
-                <p>Published at:<p/>{{ post.published_date }}
+                {{ post.published_date }}
             </div>
         {% endif %}
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"> Edit </span></a>

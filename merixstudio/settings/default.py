@@ -32,6 +32,7 @@ INSTALLED_APPS = (
     'merixstudio',
     'auth_ex',
     'blog'
+    #'articles'
 
 )
 

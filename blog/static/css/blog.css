@@ -23,6 +23,9 @@
     border-radius: 10 px;
 }
 
+.welcome {
+    text-align: center;
+}
 .body {
     background-image: url('/static/images/merixstudio.png');
      background-position: 520px;
@@ -35,6 +38,10 @@ h1, h2, h3, h4 {
 .comment_count {
     float:bottom;
 }
+
+.menu {
+    font-size: 15pt;
+    }
 
 .date {
     float: right;
@@ -68,4 +75,7 @@ h1, h2, h3, h4 {
 .post h1 a, .post h1 a:visited {
     color: #000000;
 }
+
+
+
 

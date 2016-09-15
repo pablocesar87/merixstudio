@@ -5,6 +5,8 @@ from django.shortcuts import redirect
 from .forms import PostForm
 from .models import Entry
 
+def home(request):
+    return render(request, 'blog/home.html')
 
 def post_list(request):
     posts = Entry.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -21,7 +23,6 @@ def post_new(request):
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = request.user
             post.published_date = timezone.now()
             post.save()
             return redirect('post_detail', pk=post.pk)
@@ -36,7 +37,6 @@ def post_edit(request, pk):
         form = PostForm(request.POST, instance=post)
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = request.user
             post.modified_date = timezone.now() #This will be shown instead of published date after editing
             post.save()
             return redirect('post_detail', pk=post.pk)

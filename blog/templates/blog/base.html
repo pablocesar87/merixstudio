@@ -11,8 +11,12 @@
             <div class = "image"></div>
             <div class="page-header">
                 <h1> MERIXSTUDIO</h1>
-                <h4><a href="{% url 'post_list' %}">Back to the beggining<a></h4>
-                <a  class=new_post" href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> New Post </a>
+                <div class = "menu">
+                    <a href="{% url 'post_list' %}">  Blog</a><h6>  </h6>
+                    <a href="">  Articles  </a>
+                </div>
+                <h4><a href="{% url 'home' %}">Back to home<a></h4>
+
             </div>
             <div class="content container">
                 <div class="row">
@@ -21,6 +25,7 @@
                         {% endblock %}
                     </div>
                 </div>
+
             </div>
     </body>
 </html>
