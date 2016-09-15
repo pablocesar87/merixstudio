@@ -23,7 +23,6 @@ def post_new(request):
             post = form.save(commit=False)
             post.author = request.user
             post.published_date = timezone.now()
-
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
@@ -38,7 +37,7 @@ def post_edit(request, pk):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            post.modified_date = timezone.now()
+            post.modified_date = timezone.now() #This will be shown instead of published date after editing
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:

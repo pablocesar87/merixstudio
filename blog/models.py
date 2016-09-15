@@ -8,7 +8,7 @@ class Entry(models.Model):
     text= models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True)
-    modified_date = models.DateTimeField(null=True)
+    modified_date = models.DateTimeField(null=True) #If there is no modification, published date will be shown
     comment_count = models.IntegerField(blank=True, default=0)
 
 
