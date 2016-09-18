@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <div class="post">
+        {% if article.modified_date %}
+            <div class="date">
+                {{ article.modified_date }}
+            </div>
+         {% else %}
+            <div class="date">
+                {{ article.published_date }}
+            </div>
+        {% endif %}
+        <a class="btn btn-default" href="{% url 'article_edit' pk=article.pk %}"><span class="glyphicon glyphicon-pencil"> Edit </span></a>
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}

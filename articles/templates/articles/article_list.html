@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class = "menu">
+        <a  class="new_post" href="{% url 'article_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span>New Article</a>
+    </div>
+    {% for article in articles %}
+    <div class="post">
+        {% if article.modified_date %}
+            <div class="date">
+                <p>Modified at:<p/>{{ article.modified_date }}
+            </div>
+         {% else %}
+            <div class="date">
+                <p>Published at:<p/>{{ article.published_date }}
+            </div>
+        {% endif %}
+        <h1><a href="{% url 'article_detail' pk=article.pk %}">{{ article.title }}</a></h1>
+        <span class="comment_count"> Comments: </span>{{ article.comment_count }}</a>
+    </div>
+    {% endfor %}
+
+{% endblock content %}

@@ -31,8 +31,8 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'merixstudio',
     'auth_ex',
-    'blog'
-    #'articles'
+    'blog',
+    'articles'
 
 )
 
