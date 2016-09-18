@@ -10,8 +10,18 @@
                 {{ post.published_date }}
             </div>
         {% endif %}
-        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"> Edit </span></a>
+        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"> Edit Post </span></a>
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        <hr>
+        <a class="btn btn-default" href="{% url 'new_blog_comment' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"> Add Comment </span></a>
+        {% for comment in post.post_comments.all %}
+            <div class="comment">
+                <div class="date">{{ comment.created_date }}</div>
+                <p>{{ comment.body|linebreaksbr }}</p>
+            </div>
+        {% empty %}
+            <p>No comments here yet</p>
+        {% endfor %}
     </div>
 {% endblock %}

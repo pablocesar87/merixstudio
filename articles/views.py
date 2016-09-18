@@ -1,6 +1,5 @@
 from django.utils import timezone
-from django.shortcuts import render, get_object_or_404
-from django.shortcuts import redirect
+from django.shortcuts import render, get_object_or_404, redirect
 
 from .forms import ArticleForm
 from .models import Article
@@ -9,7 +8,7 @@ from .models import Article
 def article_list(request):
     """
     Unlike in post_list, articles list does not show text when watching the list
-    User has to enter into the article_deatil view to read the text
+    User has to enter into the article_detail view to read the text
     """
     articles = Article.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'articles/article_list.html', {'articles':articles})

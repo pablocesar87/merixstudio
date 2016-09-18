@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('blog.urls')),
     url(r'', include('articles.urls')),
+    url(r'', include('comments.urls')),
 ]
 
 if 'rosetta' in settings.INSTALLED_APPS:

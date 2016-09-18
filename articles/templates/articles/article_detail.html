@@ -10,8 +10,18 @@
                 {{ article.published_date }}
             </div>
         {% endif %}
-        <a class="btn btn-default" href="{% url 'article_edit' pk=article.pk %}"><span class="glyphicon glyphicon-pencil"> Edit </span></a>
+        <a class="btn btn-default" href="{% url 'article_edit' pk=article.pk %}"><span class="glyphicon glyphicon-pencil"> Edit Article </span></a>
         <h1>{{ article.title }}</h1>
         <p>{{ article.text|linebreaksbr }}</p>
+        <hr>
+        <a class="btn btn-default" href="{% url 'new_article_comment' pk=article.pk %}"><span class="glyphicon glyphicon-pencil"> Add Comment </span></a>
+        {% for comment in article.article_comments.all %}
+            <div class="comment">
+                <div class="date">{{ comment.created_date }}</div>
+                <p>{{ comment.body|linebreaksbr }}</p>
+            </div>
+        {% empty %}
+            <p>No comments here yet</p>
+        {% endfor %}
     </div>
 {% endblock %}
