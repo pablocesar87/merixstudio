@@ -3,4 +3,4 @@ __pycache__
 .idea
 *migrations/
 .gitignore
-settings/local.py
+merixstudio/settings/local.py

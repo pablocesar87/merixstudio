@@ -28,14 +28,24 @@ INSTALLED_APPS = (
     # 'widget_tweaks',
     # 'stdimage',
     # 'sendfile',
+    'haystack',
     'debug_toolbar',
     'merixstudio',
     'auth_ex',
     'blog',
     'articles',
     'comments'
-
 )
+
+
+# --- HAYSTACK---
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8983/solr/gettingstarted'
+    },
+}
+
 
 AUTH_USER_MODEL = 'auth_ex.User'
 LOGIN_REDIRECT_URL = '/admin/'
@@ -46,7 +56,6 @@ STATIC_ROOT = path.join(BASE_DIR, 'static')
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder'
 )
 
 # --- MEDIA ---
@@ -90,7 +99,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'merixstudio.urls'
 WSGI_APPLICATION = 'merixstudio.wsgi.application'
 
-USE_TZ = True
+USE_TZ = False
 TIME_ZONE = 'UTC'
 
 # --- LANGUAGES ---
@@ -144,7 +153,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # --- DJANGO COMPRESSOR ---
-# STATICFILES_FINDERS += ('compressor.finders.CompressorFinder',)
+STATICFILES_FINDERS += ('compressor.finders.CompressorFinder',)
 
 # --- CACHE ---
 # {

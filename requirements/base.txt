@@ -13,3 +13,5 @@ ipython
 python-memcached
 pytz
 raven
+pysolr-3.5.0
+django-haystack
