@@ -65,7 +65,7 @@ STATIC_MEDIA = path.join(BASE_DIR, 'media')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['merixstudio/search_configuration'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': (

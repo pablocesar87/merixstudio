@@ -19,3 +19,10 @@ class Article(models.Model):
     def was_published_recently(self):
         now = timezone.now()
         return now - datetime.timedelta(days=1) <= self.published_date <= now
+
+    def get_comment_count(self):
+        return self.comment_count
+
+    def new_comment(self):
+        self.comment_count += 1
+        self.save()
