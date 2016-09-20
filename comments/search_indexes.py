@@ -8,6 +8,8 @@ it is not working due to a an Attribute error when the search
 is being performed. I think the problem is with Solr and the scheme.xml
 file. But for know I can not find how to solve it.
 '''
+
+
 class CommentIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
     created_date = indexes.DateTimeField(model_attr='created_date')

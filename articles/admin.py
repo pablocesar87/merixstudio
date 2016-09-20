@@ -8,6 +8,4 @@ class ArticleAdmin(admin.ModelAdmin):
     list_display = ('title', 'published_date', 'created_date')
     readonly_fields = ('comment_count', 'modified_date')
 
-
-
 admin.site.register(models.Article, ArticleAdmin)

@@ -1,6 +1,7 @@
-SITE_ID=1
+SITE_ID = 1
 
 #You can create an user for the database of change DB configuration to trusted
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -12,10 +13,7 @@ DATABASES = {
     }
 }
 
-TIME_ZONE = 'UTC'
-#Set to your own time zone
-
-
+TIME_ZONE = 'UTC'  #Set to your own time zone
 
 # CELERY SETTINGS---- Use your own celery settings
 BROKER_URL = ''

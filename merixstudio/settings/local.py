@@ -1,6 +1,6 @@
 from .default import *
 
-SITE_ID=1
+SITE_ID = 1
 
 DATABASES = {
     'default': {

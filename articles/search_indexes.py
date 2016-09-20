@@ -8,11 +8,12 @@ it is not working due to a an Attribute error when the search
 is being performed. I think the problem is with Solr and the scheme.xml
 file. But for know I can not find how to solve it.
 '''
+
+
 class ArticleIndex(indexes.SearchIndex, indexes.Indexable):
-    title=indexes.CharField(model_attr='title')
+    title = indexes.CharField(model_attr='title')
     text = indexes.CharField(document=True, use_template=True)
     created_date = indexes.DateTimeField(model_attr='created_date')
-
 
     def get_model(self):
         return Article
