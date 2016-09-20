@@ -19,9 +19,11 @@ TIME_ZONE = 'UTC'
 
 # CELERY SETTINGS---- Use your own celery settings
 BROKER_URL = ''
+CELERY_RESULT_BACKEND = ''
 CELERY_ACCEPT_CONTENT = []
 CELERY_TASK_SERIALIZER = ''
 CELERY_RESULT_SERIALIZER = ''
+CELERY_TIMEZONE = ''
 
 '''
 After change your settings, rename this file to local.py
