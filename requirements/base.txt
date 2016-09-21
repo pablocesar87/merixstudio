@@ -10,8 +10,6 @@ Django==1.9.9
 django-allauth==0.27.0
 django-appconf==1.0.2
 django-compressor==2.1
-django-debug-toolbar==1.5
-django-extensions==1.7.4
 django-haystack==2.5.0
 django-model-utils==2.5.2
 django-registration-redux==1.4
@@ -27,7 +25,6 @@ oauthlib==2.0.0
 pep8==1.7.0
 pexpect==4.2.1
 pickleshare==0.7.4
-pkg-resources==0.0.0
 prompt-toolkit==1.0.7
 psycopg2==2.6.2
 ptyprocess==0.5.1

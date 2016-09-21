@@ -1,7 +1,6 @@
 __pycache__
 *.pyc
 .idea
-*migrations/
 merixstudio/settings/local.py
 local.py
 celerybeat.pid
