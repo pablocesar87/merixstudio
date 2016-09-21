@@ -20,7 +20,7 @@ Start your local server: python manage.py runserver
 
 
 
-##-------------The next step is very important in order to the site to work properly------------------
+##The next step is very important in order to the site to work properly
 
 To start celery to work, you need to start a new worker, to do so you need to follow the next steps:
 
