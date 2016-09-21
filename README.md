@@ -9,7 +9,7 @@ To check if server is running properly run: redis-cli ping; it should answer:PON
 
 "settings/local.py" should be created from "merixstudio/settings/local_template.py". Just fill with your information.
 
-Create a virtualenv for python3: python3 -m venv <yourvenvname>
+Create a virtualenv for python3: python3 -m venv "yourvenvname"
 
 Install dependencies: pip -r install base.txt
 
