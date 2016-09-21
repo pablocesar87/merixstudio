@@ -12,6 +12,6 @@ comments are not taking into account.
 
 
 @task
-def one_new_comment_article(pk):
+def create_comment_in_article(pk):
     obj = Article.objects.get(pk=pk)
     obj.new_comment()

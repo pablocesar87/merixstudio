@@ -12,6 +12,6 @@ comments are not taking into account.
 
 
 @task
-def one_new_comment_blog(pk):
+def create_comment_in_blog(pk):
     obj = Entry.objects.get(pk=pk)
     obj.new_comment()
