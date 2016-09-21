@@ -18,6 +18,8 @@
         <h1><a href="{% url 'article_detail' pk=article.pk %}">{{ article.title }}</a></h1>
         <span class="comment_count"> Comments: </span>{{ article.comment_count }}</a>
     </div>
+    {% empty %}
+        <div class="post"><p>No articles are available.</p></div>
     {% endfor %}
 
 {% endblock content %}

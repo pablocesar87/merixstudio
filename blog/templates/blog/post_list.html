@@ -19,6 +19,8 @@
         <p>{{ post.text|linebreaksbr }}</p>
         <span class="comment_count"> Comments: </span>{{ post.comment_count }}</a>
     </div>
+    {% empty %}
+        <div class="post"><p>No posts are available.</p></div>
     {% endfor %}
 
 {% endblock content %}

@@ -3,7 +3,7 @@ from django.db import models
 
 class Comment(models.Model):
     """
-    Added generic relationship with the blog nad articles apps
+    Added generic relationship with the blog and articles apps
     related_names are needed in order to avoid conflicts
     """
     post = models.ForeignKey('blog.Entry', related_name='post_comments', blank=True, null=True)
