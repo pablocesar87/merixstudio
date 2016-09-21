@@ -1,10 +1,10 @@
 Project for merixstudio interview
 
 
-#INSTALATION GUIDE
+#INSTALLATION GUIDE
 
 ##IMPORTANT:
-You need to have redis in your machine in orther to celery to work properly.
+You need to have redis in your machine in order to celery to work properly.
 Installing redis in Ubuntu is really easy: sudo apt-get install redis-server
 To check if server is running properly run: redis-cli ping; it should answer:PONG
 
