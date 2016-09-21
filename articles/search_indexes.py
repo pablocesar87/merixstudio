@@ -6,7 +6,9 @@ from .models import Article
 I have implemented the whole search process but unfortunatly
 it is not working due to a an Attribute error when the search
 is being performed. I think the problem is with Solr and the scheme.xml
-file. But for know I can not find how to solve it.
+file. But for know I can not find how to solve it.Also I did not
+include Solr in requirements to avoid further errors when checking
+my project.
 '''
 
 
