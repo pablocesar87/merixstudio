@@ -8,15 +8,21 @@ You need to have redis in your machine in order to celery to work properly.
 Installing redis in Ubuntu is really easy: sudo apt-get install redis-server
 To check if server is running properly run: redis-cli ping; it should answer:PONG
 
+##IMPORTANT 2:
+The application assumes that you already have a database named "merixstudio" with PostgreSQL.
+You will have to fill the database settings in your local.py created from your local_template.py
+with your own data.
+
 "settings/local.py" should be created from "merixstudio/settings/local_template.py". Just fill with your information.
 
-Create a virtualenv for python3: python3 -m venv "yourvenvname"
+##STEPS:
+    ·Create a virtualenv for python3: python3 -m venv "yourvenvname"
 
-Install dependencies: pip -r install base.txt
+    ·Install dependencies: pip install -r requirements/base.txt
 
-Execute migrations: python manage.py migrate
+    ·Execute migrations: python manage.py migrate
 
-Start your local server: python manage.py runserver
+    ·Start your local server: python manage.py runserver
 
 
 
